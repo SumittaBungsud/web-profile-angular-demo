@@ -1,0 +1,29 @@
+<section class="exp-items">
+  @if (exptype == 'work'){ @for (ex of exps; track ex.id) {
+  <section class="work-item">
+    <p class="timeline">{{ ex.start }} - {{ ex.stop }}</p>
+    <div class="work-section">
+      <p class="company">
+        {{ ex.company }}
+      </p>
+      <p class="position">{{ ex.position }}</p>
+      <ul class="des-list">
+        @for (des of ex.descriptions; track des) {
+        <li class="description">{{ des }}</li>
+        }
+      </ul>
+    </div>
+  </section>
+  } } @else { @for (edu of edus; track edu.id) {
+  <section class="edu-item">
+    <p class="timeline">{{ edu.start }} - {{ edu.stop }}</p>
+    <div class="edu-section">
+      <p class="institute">
+        {{ edu.institute }}
+      </p>
+      <p class="degree">{{ edu.degree }}</p>
+      <p class="description">Education work!</p>
+    </div>
+  </section>
+  } }
+</section>

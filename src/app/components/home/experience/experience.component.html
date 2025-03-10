@@ -1,0 +1,12 @@
+<div id="experience">
+  <div class="header">
+    <p class="subject">Experiences</p>
+    <div class="types">
+      <button class="cat-bth" (click)="setExpType('work')">Work</button>
+      <button class="cat-bth" (click)="setExpType('edu')">Education</button>
+    </div>
+  </div>
+  <div class="exp-details">
+    <app-exp-item [exptype]="expType"></app-exp-item>
+  </div>
+</div>

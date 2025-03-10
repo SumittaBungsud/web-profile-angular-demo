@@ -1,0 +1,54 @@
+$font-fam: Arial, Helvetica, sans-serif
+
+%exp-layout
+    margin: 0.5em
+    padding: 1.5em
+    background-color: rgba(255, 255, 255, 0.4)
+    border-radius: 1em
+    display: flex
+    flex-direction: row
+    align-content: flex-start
+    gap: 2em
+
+.exp-items
+    font-family: $font-fam
+
+    .work-item
+        @extend %exp-layout
+
+        .timeline
+            min-width: fit-content
+            font-size: 14px
+            font-weight: 600
+            color: #363636
+        .company
+            font-size: 20px
+            font-weight: 600
+            color: #6B77EA
+            line-height: 0
+        .position
+            font-size: 17px
+            font-weight: 600
+            color: #ca639a
+        .description
+            font-size: 16px
+
+    .edu-item
+        @extend %exp-layout
+
+        .timeline
+            min-width: fit-content
+            font-size: 14px
+            font-weight: 600
+            color: #363636
+        .institute
+            font-size: 20px
+            font-weight: 600
+            color: #6B77EA
+            line-height: 0
+        .degree
+            font-size: 17px
+            font-weight: 600
+            color: #ca639a
+
+//border: 2px solid black

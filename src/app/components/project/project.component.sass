@@ -1,0 +1,101 @@
+$font-fam: Arial, Helvetica, sans-serif
+$font-color-1: #f6eef4
+$des-backgroud-lin: linear-gradient(0.35turn,#9ec0bc, #697b9b, #eabfe1)
+$main-color-1: #9747FF
+$main-color-2:#6B77EA
+$main-color-3:#C79CFF
+
+#project
+    display: flex
+    flex-direction: column
+    height: 100%
+    box-shadow: 0 -3px 10px #b5b5b5
+    font-family: $font-fam
+    background-image: linear-gradient(0.35turn,#fbf4e9, #D5CBB9, #fbf4e9)
+
+    .project-component
+        margin: 5vw 10vw
+        .subject
+            font-size: 2em
+            font-weight: 700
+            color: $main-color-1
+            text-shadow: 1.5px 1.5px 2px $main-color-3
+            border-left: 5px solid 
+            border-image: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3) 1 round
+            padding-left: 0.6em
+            margin-bottom: 5vw
+        .project-item
+            position: relative
+            display: flex
+            flex-direction: row
+            .proj-img
+                display: flex
+                align-content: center
+                margin-right: 1em
+                border-radius: 1em
+                &:hover
+                    background-image: linear-gradient(to bottom,#5605c171, #bb82ea71, #f5a5e371)
+            img
+                border-radius: 1em
+                align-self: center
+                width: 20vw
+                height: 20vw
+                object-fit: cover
+                opacity: 0.4
+                filter: grayscale(1)
+                &:hover
+                    filter: grayscale(0)
+                    opacity: 1
+                    object-fit: contain
+            .project-info
+                position: relative
+                max-width: 35vw
+                right: 0
+                text-align: end
+                margin-left: 2em
+
+                > p:first-child
+                    color: #b13cff
+                    font-size: 1em
+                    font-weight: 700
+                    line-height: 0
+                .proj-header
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    .proj-link
+                        display: flex
+                        flex-direction: row
+                        font-size: 1.4em
+                        a
+                            color: #9313e8b0
+                            text-decoration: none
+                            margin-left: 1em
+                            align-content: center
+                            &:hover
+                                color: #6e08b2
+                    .proj-name
+                        color: $main-color-2
+                        font-size: 2em
+                        font-weight: 800
+                        line-height: 0
+                .proj-des
+                    padding: 2em
+                    text-align: start
+                    border-radius: 0.5em
+                    background-image: $des-backgroud-lin
+                    > p
+                        color: $font-color-1
+                .tools
+                    max-width: 90em
+                    display: flex
+                    flex-flow: row wrap
+                    p
+                        margin: 0.5em
+                        padding: 0.5em
+                        background-color: #ffffff80
+                        border-radius: 0.25em
+
+
+
+//border: 2px solid black

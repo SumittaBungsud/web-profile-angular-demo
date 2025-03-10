@@ -1,0 +1,54 @@
+$font-fam: Arial, Helvetica, sans-serif
+
+#profile
+    display: flex
+    flex-direction: row
+    height: 100%
+    background-image: linear-gradient(#FFB3B3, #D3C9FF, #BAC4FF, #F1D8F2)
+
+    .profile-info
+        display: flex
+        flex-direction: column
+        margin: 0 4rem 4rem 8rem
+        padding: 6rem 0 0 0
+        width: 25em
+        border-radius: 2em
+        background-color: white
+        box-shadow: -7px 4px 18px #4242426e
+        font-family: $font-fam
+
+        img
+            margin: 1em 0
+            object-fit: scale-down
+            max-width: 25em
+            max-height: 14em
+
+        article
+            padding: 0 3rem
+            .name
+                color: #6B77EA
+                font-size: 28px
+                font-weight: 700
+                line-height: 0
+            .position
+                margin-bottom: 1.7em
+                font-size: 18px
+                font-weight: 600
+                color: #58537da9
+            .description
+                color: #727272
+
+        ul
+            padding-top: 1em
+            display: grid
+            grid-template-columns: auto auto
+            grid-template-rows: 30px 30px 30px 
+            list-style-type: none
+            font-size: 14px
+            font-weight: 700
+
+    .category
+        margin-left: 1em
+
+
+//border: 2px solid black

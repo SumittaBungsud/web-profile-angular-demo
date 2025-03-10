@@ -1,0 +1,29 @@
+<div id="profile">
+  <section class="profile-info">
+    <img src="image/cactus.png" />
+    <article>
+      <p class="name">Sumitta Bungsud</p>
+      <p class="position">Full Stack Engineer</p>
+      <p class="description">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi,
+        corporis nisi. Praesentium repellat illo cupiditate ea! Quas veniam quam
+        reiciendis veritatis ducimus, voluptatum, alias sint voluptatem
+        accusamus non, qui et?
+      </p>
+      <ul>
+        <li (click)="setCurrentTab('about')">About me</li>
+        <li (click)="setCurrentTab('exp')">Experiences</li>
+        <li><a>DevTools</a></li>
+        <li><a>Courses</a></li>
+        <li><a>Projects</a></li>
+      </ul>
+    </article>
+  </section>
+  <section class="category">
+    @if (currentTab == 'about'){
+    <app-aboutme></app-aboutme>
+    }@else if (currentTab == 'exp'){
+    <app-exp></app-exp>
+    }
+  </section>
+</div>
