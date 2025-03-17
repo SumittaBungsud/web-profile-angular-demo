@@ -1,37 +1,42 @@
 $font-fam: Arial, Helvetica, sans-serif
+$main-color-1: #9747FF
+$main-color-3:#C79CFF
+$sub-color-1: #4e4e4e
 
 #about
     margin-top: 4rem
-    padding: 6em 0 0 6em
+    padding: 6em 0 0 5vmin
     max-width: 42vw
-    position: relative
     font-family: $font-fam
 
     .subject
         font-size: 2em
         font-weight: 700
-        color: #9747FF
-        text-shadow: 1.5px 1.5px 2px #C79CFF
+        color: $main-color-1
+        text-shadow: 1.5px 1.5px 2px $main-color-3
         border-left: 5px solid 
         border-image: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3) 1 round
         padding-left: 0.6em
     p
         font-size: 1.3em
-    button
-        position: absolute
-        right: 0
-        margin: 1em 2em 0 0
-        padding: 0.8em
-        background: none
-        font-size: 1em
-        border: 2px solid #434343
-        color:#434343
-        border-radius: 0.5em
-        &:hover
-            background-color: #64478f
-            color:#cfb6ed
-            border: none
-            box-shadow: 2px 2px 4px #909090
+    > div
+        display: flex
+        flex: row wrap
+        justify-content: end
+        button
+            padding: 0.8em
+            background: none
+            font-size: 1em
+            border: 1px solid $sub-color-1
+            color:$sub-color-1
+            border-radius: 0.25em
+            transition: transform 0.2s
+            &:hover
+                box-shadow: 0 3px 0 #767676
+                transform: translate(0,-1px)
+                background-color: #ffffff51
+                color:$main-color-1
+                border: none
 
 
 //border: 2px solid black

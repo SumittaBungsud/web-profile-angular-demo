@@ -5,6 +5,7 @@ $des-backgroud-lin: linear-gradient(0.35turn,#9ec0bc, #697b9b, #eabfe1)
 $main-color-1: #9747FF
 $main-color-2:#6B77EA
 $main-color-3:#C79CFF
+$sub-color-1: #4e4e4e
 
 
 #project
@@ -26,10 +27,31 @@ $main-color-3:#C79CFF
             border-image: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3) 1 round
             padding-left: 0.6em
             margin-bottom: 5vw
+
+        .view-more
+            display: flex
+            flex: row wrap
+            justify-content: center
+            button
+                font-size: 1.1em
+                margin: 1.3em
+                padding: 1em 2em
+                background: none
+                color: $sub-color-1
+                border: 2px solid $sub-color-1
+                border-radius: 0.25em
+                transition: transform 0.12s
+                &:hover
+                    box-shadow: 6px 6px 0 $sub-color-1
+                    transform: translate(-3px,-3px)
         .project-item
             position: relative
             display: flex
             flex-direction: row
+            justify-content: space-around
+            padding: 1.3em
+            background-color: #ffffff66
+            border-radius: 1em
             .proj-img
                 display: flex
                 align-content: center
@@ -51,16 +73,14 @@ $main-color-3:#C79CFF
                     object-fit: contain
             .project-info
                 position: relative
-                max-width: 35vw
                 right: 0
-                text-align: end
-                margin-left: 2em
+                // max-width: 35vw
 
-                > p:first-child
-                    color: #b13cff
-                    font-size: 1em
-                    font-weight: 700
-                    line-height: 0
+                // > p:first-child
+                //     color: #b13cff
+                //     font-size: 1em
+                //     font-weight: 700
+                //     line-height: 0
                 .proj-header
                     display: flex
                     flex-direction: row
@@ -68,7 +88,8 @@ $main-color-3:#C79CFF
                     .proj-link
                         display: flex
                         flex-direction: row
-                        font-size: 1.4em
+                        font-size: 1.5em
+                        padding-right: 1.2em
                         a
                             color: #9313e8b0
                             text-decoration: none
@@ -78,28 +99,32 @@ $main-color-3:#C79CFF
                                 color: #6e08b2
                     .proj-name
                         color: $main-color-2
-                        font-size: 2em
-                        font-weight: 800
-                        line-height: 0
+                        font-size: 2.3em
+                        font-weight: 700
+                        margin: 0.5em 0
                 .proj-des
-                    padding: 2em
-                    text-align: start
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    padding: 1.5em
+                    height: 25vmin
                     border-radius: 0.5em
                     background-image: $des-backgroud-lin
+                    overflow: auto
                     > p
                         color: $font-color-1
-                .tools
-                    font-size: 0.8em
-                    font-weight: 600
-                    max-width: 90em
-                    display: flex
-                    flex-flow: row wrap
-                    p
-                        margin: 0.5em
-                        padding: 0.5em
-                        background-color: #ffffff80
-                        color: $font-color-tag
-                        border-radius: 0.25em
+                    .tools
+                        font-size: 0.8em
+                        font-weight: 600
+                        max-width: 90em
+                        display: flex
+                        flex-flow: row wrap
+                        p
+                            margin: 0.5em
+                            padding: 0.5em
+                            background-color: #ffffff80
+                            color: $font-color-tag
+                            border-radius: 0.25em
 
 
 
