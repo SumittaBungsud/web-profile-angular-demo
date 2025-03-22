@@ -24,7 +24,7 @@ export class NavComponent {
     },
     {
       id: 2,
-      link: 'mailto:sumitta.hct@gmail.com',
+      link: '#contact',
       icon: faEnvelope,
     },
   ];

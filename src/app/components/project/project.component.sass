@@ -2,6 +2,7 @@ $font-fam: Arial, Helvetica, sans-serif
 $font-color-1: #f6eef4
 $font-color-tag: #1a5a68
 $des-backgroud-lin: linear-gradient(0.35turn,#9ec0bc, #697b9b, #eabfe1)
+$hl-theme1: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3)
 $main-color-1: #9747FF
 $main-color-2:#6B77EA
 $main-color-3:#C79CFF
@@ -24,7 +25,7 @@ $sub-color-1: #4e4e4e
             color: $main-color-1
             text-shadow: 1.5px 1.5px 2px $main-color-3
             border-left: 5px solid 
-            border-image: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3) 1 round
+            border-image: $hl-theme1 1 round
             padding-left: 0.6em
             margin-bottom: 5vw
 
@@ -32,18 +33,21 @@ $sub-color-1: #4e4e4e
             display: flex
             flex: row wrap
             justify-content: center
-            button
-                font-size: 1.1em
-                margin: 1.3em
-                padding: 1em 2em
-                background: none
-                color: $sub-color-1
-                border: 2px solid $sub-color-1
-                border-radius: 0.25em
-                transition: transform 0.12s
-                &:hover
-                    box-shadow: 6px 6px 0 $sub-color-1
-                    transform: translate(-3px,-3px)
+            margin: 2em 0
+            .popbtn
+                width: 10em
+        //     button
+        //         font-size: 1.1em
+        //         margin: 1.3em
+        //         padding: 1em 2em
+        //         background: none
+        //         color: $sub-color-1
+        //         border: 2px solid $sub-color-1
+        //         border-radius: 0.25em
+        //         transition: transform 0.12s
+        //         &:hover
+        //             box-shadow: 6px 6px 0 $sub-color-1
+        //             transform: translate(-3px,-3px)
         .project-item
             position: relative
             display: flex

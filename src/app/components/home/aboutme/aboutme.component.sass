@@ -4,7 +4,7 @@ $main-color-3:#C79CFF
 $sub-color-1: #4e4e4e
 
 #about
-    margin-top: 4rem
+    margin-top: 2rem
     padding: 6em 0 0 5vmin
     max-width: 42vw
     font-family: $font-fam
@@ -17,6 +17,7 @@ $sub-color-1: #4e4e4e
         border-left: 5px solid 
         border-image: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3) 1 round
         padding-left: 0.6em
+        margin: 0.75em 0
     p
         font-size: 1.3em
     > div
@@ -25,6 +26,7 @@ $sub-color-1: #4e4e4e
         justify-content: end
         button
             padding: 0.8em
+            margin: 1.5em
             background: none
             font-size: 1em
             border: 1px solid $sub-color-1
@@ -32,11 +34,9 @@ $sub-color-1: #4e4e4e
             border-radius: 0.25em
             transition: transform 0.2s
             &:hover
-                box-shadow: 0 3px 0 #767676
-                transform: translate(0,-1px)
-                background-color: #ffffff51
-                color:$main-color-1
-                border: none
+                border-color: $main-color-1
+                border-left-width: 0.5em
+                color: $main-color-1
 
 
 //border: 2px solid black
