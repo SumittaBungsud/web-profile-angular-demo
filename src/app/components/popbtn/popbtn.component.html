@@ -1,8 +1,10 @@
 <div id="pop-btn">
-  <div class="btn" [style]="{ background: backgnd }">
-    <a [href]="link">{{ txt }}</a>
+  <div class="btn">
+    <div class="btn-inner" [style]="{ background: backgnd }">
+      <a [href]="link">{{ txt }}</a>
+    </div>
   </div>
-  <div class="backgnd" [style]="{ background: highl }">
+  <div class="btn-bg" [style]="{ background: highl }">
     <p>{{ txt }}</p>
   </div>
 </div>

@@ -13,7 +13,7 @@
       <ul>
         <li (click)="setCurrentTab('about')"><p>About me</p></li>
         <li (click)="setCurrentTab('exp')"><p>Experiences</p></li>
-        <li><p>DevTools</p></li>
+        <li (click)="setCurrentTab('skill')"><p>DevTools</p></li>
         <li><p>Courses</p></li>
         <li><p>Projects</p></li>
       </ul>
@@ -24,6 +24,8 @@
     <app-aboutme></app-aboutme>
     }@else if (currentTab == 'exp'){
     <app-exp></app-exp>
+    }@else if (currentTab == 'skill'){
+    <app-skill></app-skill>
     }
   </section>
 </div>

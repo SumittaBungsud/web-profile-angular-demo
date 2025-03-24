@@ -10,5 +10,5 @@ export class PopbtnComponent {
   @Input() txt = '';
   @Input() link = '';
   @Input() backgnd = '#cecece';
-  @Input() highl = '#565656';
+  @Input() highl = '';
 }

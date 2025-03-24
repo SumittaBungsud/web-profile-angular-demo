@@ -1,0 +1,13 @@
+<section id="skill">
+  <p class="subject">DevTools & Skills</p>
+  <div class="tool-list">
+    @for(item of skills; track item.name){
+    <div class="tool-item">
+      <div class="tool-logo">
+        <img [src]="item.logo" />
+      </div>
+      <p class="tool-name">{{ item.name }}</p>
+    </div>
+    }
+  </div>
+</section>

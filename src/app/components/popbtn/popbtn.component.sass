@@ -1,12 +1,12 @@
 $sub-color-1: #4e4e4e
-// $hl-theme1: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3)
+$hl-theme1: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3)
 
 #pop-btn
     .btn
         position: absolute
-        padding: 1em 2em
+        padding: 2px
         font-size: 1.1em
-        border: 2px solid $sub-color-1
+        background-image: $hl-theme1
         border-radius: 0.25em
         transition: transform 0.12s
         z-index: 2
@@ -14,12 +14,17 @@ $sub-color-1: #4e4e4e
             color: #2e2e2e
             text-decoration: none
         &:hover
-            transform: translate(-8px,-8px)
-    .backgnd
+            transform: translate(-9px,-9px)
+
+        .btn-inner
+            padding: 1em 2em
+            border-radius: 0.25em
+    .btn-bg
         position: absolute
         padding: 1em 2em
         font-size: 1.1em
         border-radius: 0.25em
+        background-image: $hl-theme1
         z-index: 1
         p
             visibility: hidden
