@@ -1,14 +1,26 @@
-<div id="profile">
+<div id="preview" (click)="previewHandler()">
+  <div>
+    <p class="text">Full name</p>
+    <p class="name">SUMITTA &nbsp; BUNGSUD</p>
+  </div>
+  <div>
+    <p class="text">Position</p>
+    <p class="position">FULLSTACK &nbsp; SOFTWARE &nbsp; ENGINEER</p>
+  </div>
+  <p class="button">START →</p>
+</div>
+
+<section id="profile">
   <section class="profile-info">
     <img src="image/cactus.png" />
     <article>
       <p class="name">Sumitta Bungsud</p>
       <p class="position">Full Stack Engineer</p>
       <p class="description">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi,
-        corporis nisi. Praesentium repellat illo cupiditate ea! Quas veniam quam
-        reiciendis veritatis ducimus, voluptatum, alias sint voluptatem
-        accusamus non, qui et?
+        I'm a software engineer at SS&C Technologies. I built this web to
+        present as the profile and portfolio about my learning experiences. Hope
+        you will know more about me or check out the social media contact to
+        talk!
       </p>
       <ul>
         <li (click)="setCurrentTab('about')"><p>About me</p></li>
@@ -28,4 +40,4 @@
     <app-skill></app-skill>
     }
   </section>
-</div>
+</section>

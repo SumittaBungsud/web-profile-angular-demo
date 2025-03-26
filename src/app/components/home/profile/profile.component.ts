@@ -15,4 +15,18 @@ export class ProfileComponent {
   setCurrentTab(arrg: string) {
     this.currentTab = arrg;
   }
+
+  previewHandler() {
+    const ref = document.getElementById('preview');
+    if (ref) {
+      const ref2 = ref.querySelector('div > p');
+      const ref3 = ref.querySelector('.button');
+
+      if (ref2 && ref3) {
+        ref2.remove();
+        ref3.remove();
+        ref.style.height = '0';
+      }
+    }
+  }
 }

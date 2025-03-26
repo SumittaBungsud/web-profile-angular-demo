@@ -4,10 +4,14 @@ $main-color-3:#C79CFF
 $sub-color-1: #4e4e4e
 
 #about
-    margin-top: 2rem
+    position: relative
     padding: 6em 0 0 5vmin
     max-width: 42vw
     font-family: $font-fam
+
+    @media only screen and (max-width: 1300px)
+        max-width: 70vw
+        padding: 0
 
     .subject
         font-size: 2em

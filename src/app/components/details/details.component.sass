@@ -1,0 +1,29 @@
+$main-color-2:#6B77EA
+$sub-color-1: #dfdfdf
+$bd-color-1: linear-gradient(to right,#dfdfdf74,$sub-color-1, $main-color-2)
+
+#details
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100vh
+
+    #preloader
+        width: 120px
+        height: 120px
+        border: 14px solid $sub-color-1
+        border-top-color: $main-color-2
+        border-radius: 50%
+        animation: spin 1.5s linear infinite
+
+    @keyframes spin
+        0%
+            border-top-color: $sub-color-1
+            transform: rotate(0deg)
+        50%
+            border-top-color: $main-color-2
+            transform: rotate(180deg)
+        100%
+            border-top-color: $sub-color-1
+            transform: rotate(360deg)
