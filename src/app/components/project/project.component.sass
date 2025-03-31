@@ -7,7 +7,8 @@ $main-color-1: #9747FF
 $main-color-2:#6B77EA
 $main-color-3:#C79CFF
 $sub-color-1: #4e4e4e
-
+$middle: 1140px
+$small: 645px
 
 #project
     display: flex
@@ -15,7 +16,6 @@ $sub-color-1: #4e4e4e
     height: 100%
     box-shadow: 0 -3px 10px #b5b5b5
     font-family: $font-fam
-    // background-image: linear-gradient(0.35turn,#fbf4e9, #D5CBB9, #fbf4e9)
     background-color: #f3ebde
 
     .project-component
@@ -28,27 +28,19 @@ $sub-color-1: #4e4e4e
             border-left: 5px solid 
             border-image: $hl-theme1 1 round
             padding-left: 0.6em
-            margin-bottom: 5vw
+            margin: 5vw 0
 
         .view-more
             display: flex
             flex: row wrap
             justify-content: center
-            margin: 2em 0
+            margin: 4em 0
             .popbtn
                 width: 10em
-        //     button
-        //         font-size: 1.1em
-        //         margin: 1.3em
-        //         padding: 1em 2em
-        //         background: none
-        //         color: $sub-color-1
-        //         border: 2px solid $sub-color-1
-        //         border-radius: 0.25em
-        //         transition: transform 0.12s
-        //         &:hover
-        //             box-shadow: 6px 6px 0 $sub-color-1
-        //             transform: translate(-3px,-3px)
+
+            @media only screen and (max-width: $small)
+                font-size: 0.8em
+
         .project-item
             position: relative
             display: flex
@@ -79,14 +71,6 @@ $sub-color-1: #4e4e4e
                     object-fit: contain
             .project-info
                 position: relative
-                right: 0
-                // max-width: 35vw
-
-                // > p:first-child
-                //     color: #b13cff
-                //     font-size: 1em
-                //     font-weight: 700
-                //     line-height: 0
                 .proj-header
                     display: flex
                     flex-direction: row
@@ -108,12 +92,14 @@ $sub-color-1: #4e4e4e
                         font-size: 2.3em
                         font-weight: 700
                         margin: 0.5em 0
+                        @media only screen and (max-width: $middle)
+                                font-size: 1.8em
                 .proj-des
                     display: flex
                     flex-direction: column
                     justify-content: space-between
                     padding: 1.5em
-                    height: 25vmin
+                    // height: 25vmin
                     border-radius: 0.5em
                     background-image: $des-backgroud-lin
                     overflow: auto
@@ -121,6 +107,7 @@ $sub-color-1: #4e4e4e
                         color: $font-color-1
                     .tools
                         font-size: 0.8em
+                        margin: 1em 0
                         font-weight: 600
                         max-width: 90em
                         display: flex
@@ -132,6 +119,14 @@ $sub-color-1: #4e4e4e
                             color: $font-color-tag
                             border-radius: 0.25em
 
+    @media only screen and (max-width: $middle)
+        .proj-img
+            visibility: hidden
+            width: 0
+
+    @media only screen and ( min-width: $middle)
+        .proj-des
+            height: 25vmin
 
 
 //border: 2px solid black

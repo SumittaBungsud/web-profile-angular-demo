@@ -11,6 +11,7 @@ import { SkillComponent } from '../skill/skill.component';
 })
 export class ProfileComponent {
   currentTab = 'about';
+  win_middle_xs = window.innerWidth <= 840;
 
   setCurrentTab(arrg: string) {
     this.currentTab = arrg;
@@ -28,5 +29,9 @@ export class ProfileComponent {
         ref.style.height = '0';
       }
     }
+  }
+
+  onResize() {
+    this.win_middle_xs = window.innerWidth <= 840;
   }
 }

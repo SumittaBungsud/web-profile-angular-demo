@@ -1,4 +1,4 @@
-<div id="preview" (click)="previewHandler()">
+<!-- <div id="preview" (click)="previewHandler()">
   <div>
     <p class="text">Full name</p>
     <p class="name">SUMITTA &nbsp; BUNGSUD</p>
@@ -8,9 +8,10 @@
     <p class="position">FULLSTACK &nbsp; SOFTWARE &nbsp; ENGINEER</p>
   </div>
   <p class="button">START →</p>
-</div>
+</div> -->
 
-<section id="profile">
+<section id="profile" (window:resize)="onResize()">
+  @if (win_middle_xs){
   <section class="profile-info">
     <img src="image/cactus.png" />
     <article>
@@ -22,7 +23,30 @@
         you will know more about me or check out the social media contact to
         talk!
       </p>
-      <ul>
+    </article>
+  </section>
+  <section aria-details="menu profile">
+    <ul class="menu-profile">
+      <li (click)="setCurrentTab('about')"><p>About me</p></li>
+      <li (click)="setCurrentTab('exp')"><p>Experiences</p></li>
+      <li (click)="setCurrentTab('skill')"><p>DevTools</p></li>
+      <li><p>Courses</p></li>
+      <li><p>Projects</p></li>
+    </ul>
+  </section>
+  }@else{
+  <section class="profile-info">
+    <img src="image/cactus.png" />
+    <article>
+      <p class="name">Sumitta Bungsud</p>
+      <p class="position">Full Stack Engineer</p>
+      <p class="description">
+        I'm a software engineer at SS&C Technologies. I built this web to
+        present as the profile and portfolio about my learning experiences. Hope
+        you will know more about me or check out the social media contact to
+        talk!
+      </p>
+      <ul class="menu-profile">
         <li (click)="setCurrentTab('about')"><p>About me</p></li>
         <li (click)="setCurrentTab('exp')"><p>Experiences</p></li>
         <li (click)="setCurrentTab('skill')"><p>DevTools</p></li>
@@ -31,9 +55,10 @@
       </ul>
     </article>
   </section>
+  }
   <section class="category">
     @if (currentTab == 'about'){
-    <app-aboutme></app-aboutme>
+    <app-aboutme (currenttab)="setCurrentTab($event)"></app-aboutme>
     }@else if (currentTab == 'exp'){
     <app-exp></app-exp>
     }@else if (currentTab == 'skill'){

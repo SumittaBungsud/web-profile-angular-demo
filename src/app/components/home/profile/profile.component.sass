@@ -1,7 +1,10 @@
 $font-fam: Arial, Helvetica, sans-serif
+$full: 1360px
+$large: 1300px
+$middle-xs: 840px
 
 #preview
-    @media only screen and (max-width: 1360px)
+    @media only screen and (max-width: $full)
         visibility: hidden
     position: absolute
     width: 100vw
@@ -37,26 +40,42 @@ $font-fam: Arial, Helvetica, sans-serif
         margin-top: 2em
 
 #profile
-    display: flex
-    flex-direction: row
-    justify-content: center
-    align-items: center
+    display: grid
+    grid-template-columns: auto auto auto
+    font-family: $font-fam
     background-image: linear-gradient(#FFB3B3, #D3C9FF, #BAC4FF, #F1D8F2)
 
-    @media only screen and (max-width: 1300px)
-        flex-direction: column
-
-    .profile-info
+    @media only screen and (max-width: $large)
         display: flex
         flex-direction: column
-        margin: 0 4rem 4rem 8rem
-        padding: 6rem 0 0 0
-        width: 25em
-        border-radius: 2em
-        background-color: #ffffff
-        box-shadow: -7px 4px 18px #4242426e
-        font-family: $font-fam
+        justify-content: center
+        align-items: center
 
+    .profile-info
+        grid-column: 1/ span 1
+        display: flex
+        flex-direction: column
+        padding: 6rem 2rem 3rem 6rem
+        width: 25em
+        height: 90vh
+        background: linear-gradient(130deg, #ffdfb3 5%,#e6e0ff 50%, #ffffff00 55%), linear-gradient(320deg, #d18eb3 5%,#e6e0ff 40%, #ffffff00 55%), linear-gradient(45deg, #e6e0ff 40%, #ffffff00 55%),linear-gradient(220deg, #e6e0ff 40%, #ffffff00 55%)
+        // background: linear-gradient(45deg, #e6e0ff 25%, #ffffff00 55%)
+        box-shadow: 7px 0 18px #b871716e
+        // linear-gradient(130deg, #FFB3B3 10%, #ffffff00 55%), 
+        // linear-gradient(120deg, #49005d 5%, #ffffff00 55%), 
+        // linear-gradient(250deg, #eeaf61 5%, #ffffff00 55%), 
+        // linear-gradient(360deg, #e6e0ff 10%, #ffffff00 55%)
+        // linear-gradient(360deg, #d18eb3 10%, #ffffff00 55%)
+
+        // linear-gradient(180deg, #FFB3B3 5%, #ffffff00 55%), 
+        // linear-gradient(360deg, #d18eb3 5%, #ffffff00 55%), 
+        // linear-gradient(100deg, #e6e0ff 50%, #ffffff00 55%), 
+        // linear-gradient(275deg, #e6e0ff 50%, #ffffff00 55%)
+        @media only screen and (max-width: $large)
+            border-radius: 1.5em
+            box-shadow: -7px 4px 18px #b871716e
+            padding: 6rem 0 3rem 0
+            height: auto
         img
             margin: 1em 0
             object-fit: scale-down
@@ -73,29 +92,55 @@ $font-fam: Arial, Helvetica, sans-serif
                 margin: 0.5em 0 1.7em 0
                 font-size: 18px
                 font-weight: 600
-                color: #58537da9
+                color: #403b6aa9
             .description
-                color: #727272
+                color: #724e4e
 
-        ul
-            padding: 2em 0
-            display: grid
-            grid-template-columns: auto auto
-            grid-template-rows: 30px 30px 30px 
-            list-style-type: none
-            font-size: 14px
-            font-weight: 700
+    .menu-profile
+        padding: 2em 0
+        display: grid
+        grid-template-columns: auto auto
+        grid-template-rows: 30px 30px 30px 
+        list-style-type: none
+        font-size: 14px
+        font-weight: 700
+
+        li
+            display: flex
+            flex-flow: row wrap
+            align-content: center
+            justify-content: center
+            &:hover
+                p
+                    border-bottom: 2px solid #6B77EA
+
+        @media only screen and (max-width: $middle-xs)
+            display: flex
+            flex-direction: row
+            justify-content: center
+            width: 100vw
+            overflow: scroll
+            &::-webkit-scrollbar
+                width: 0
+            &::-webkit-scrollbar-track
+                background: none
             li
-                display: flex
-                flex-flow: row wrap
-                align-content: center
-                justify-content: center
-                &:hover
+                white-space: nowrap
+                block-size: fit-content
+                margin: 5em 0.5em 0 0.5em
+                padding: 0.5em
+                border-radius: 0.5em
+                background-color: #ffffff8e
+                &:hover,&:focus
+                    background-color: #6B77EA
                     p
-                        border-bottom: 2px solid #6B77EA
+                        color: #cdd0ed
 
     .category
-        margin: 2rem 0 3rem 5vmin
+        grid-column: 2/ span 2
+        margin: 3rem 0 3rem 5vmax
+        @media only screen and (max-width: $middle-xs)
+            margin: 1rem 0 5rem 5vmin
 
 
 //border: 2px solid black
