@@ -1,5 +1,15 @@
-<div class="home-page">
+<section class="home-page">
   <app-profile />
   <app-project />
   <app-contact />
-</div>
+</section>
+
+<section id="social-list">
+  @for (item of socials; track item.id) {
+  <div class="icon">
+    <a [href]="item.link">
+      <fa-icon [icon]="item.icon" />
+    </a>
+  </div>
+  }
+</section>

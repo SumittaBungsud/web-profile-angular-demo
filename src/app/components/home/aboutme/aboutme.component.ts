@@ -20,7 +20,7 @@ export class AboutmeComponent {
       const elenCom = e.querySelector('.subject')?.parentElement;
       if (elenCom) {
         if (this.isShown) {
-          elenCom.style.height = '60vh';
+          elenCom.style.height = '20em';
           this.isShown = !this.isShown;
         } else {
           elenCom.style.height = 'auto';

@@ -3,7 +3,7 @@ $main-color-1: #9747FF
 $main-color-3:#C79CFF
 $sub-color-1: #4e4e4e
 $large: 1300px
-// $middle-xs: 840px
+$middle: 1140px
 
 #about
     .text-expand
@@ -18,7 +18,7 @@ $large: 1300px
             background-color: #ffffff3f
             border: 1.5px solid #ffffff
             color: #8d8d8d
-        @media only screen and (max-width: $large)
+        @media only screen and (max-width: $middle)
             visibility: visible
     .about-component
         position: relative
@@ -28,7 +28,9 @@ $large: 1300px
 
         @media only screen and (max-width: $large)
             max-width: 80vw
-            height: 60vh
+        @media only screen and (max-width: $middle)
+            max-width: 80vw
+            height: 20em
             overflow: hidden
             padding: 0
 

@@ -1,14 +1,14 @@
-$font-fam: Arial, Helvetica, sans-serif
-$full: 1360px
-$large: 1300px
-$middle-xs: 840px
+@use "../../../styleConfig/config"
+$profile-h: 40em
+$profile-w: 100vw
+
 
 #preview
-    @media only screen and (max-width: $full)
+    @media only screen and (max-width: config.$full)
         visibility: hidden
     position: absolute
-    width: 100vw
-    height: 100vh
+    width: $profile-w
+    height: calc($profile-h + 10rem)
     background-color: #18745F
     display: flex
     flex-direction: column
@@ -42,24 +42,24 @@ $middle-xs: 840px
 #profile
     display: grid
     grid-template-columns: auto auto auto
-    font-family: $font-fam
+    font-family: config.$font-fam
     background-image: linear-gradient(#FFB3B3, #D3C9FF, #BAC4FF, #F1D8F2)
 
-    @media only screen and (max-width: $large)
+    @media only screen and (max-width: config.$large)
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
 
     .profile-info
+        position: relative
         grid-column: 1/ span 1
         display: flex
         flex-direction: column
         padding: 6rem 2rem 3rem 6rem
         width: 25em
-        height: 90vh
-        background: linear-gradient(130deg, #ffdfb3 5%,#e6e0ff 50%, #ffffff00 55%), linear-gradient(320deg, #d18eb3 5%,#e6e0ff 40%, #ffffff00 55%), linear-gradient(45deg, #e6e0ff 40%, #ffffff00 55%),linear-gradient(220deg, #e6e0ff 40%, #ffffff00 55%)
-        // background: linear-gradient(45deg, #e6e0ff 25%, #ffffff00 55%)
+        height: $profile-h
+        background: linear-gradient(130deg, #ffdfb3 10%,#e6e0ff 30%, #ffffff00 55%), linear-gradient(320deg, #d18eb3 10%,#e6e0ff 30%, #ffffff00 55%), linear-gradient(40deg, #b0cf93 30%,#e6e0ff 40%, #ffffff00 55%),linear-gradient(220deg, #a588c7 30%,#e6e0ff 40%, #ffffff00 55%)
         box-shadow: 7px 0 18px #b871716e
         // linear-gradient(130deg, #FFB3B3 10%, #ffffff00 55%), 
         // linear-gradient(120deg, #49005d 5%, #ffffff00 55%), 
@@ -71,11 +71,22 @@ $middle-xs: 840px
         // linear-gradient(360deg, #d18eb3 5%, #ffffff00 55%), 
         // linear-gradient(100deg, #e6e0ff 50%, #ffffff00 55%), 
         // linear-gradient(275deg, #e6e0ff 50%, #ffffff00 55%)
-        @media only screen and (max-width: $large)
+
+        animation: toRight 1.5s ease-in-out
+        @keyframes toRight
+            0%
+                left: -35em
+            100%
+                left: 0
+
+        @media only screen and (max-width: config.$large)
             border-radius: 1.5em
-            box-shadow: -7px 4px 18px #b871716e
+            box-shadow: -7px 4px 18px #7651898e
             padding: 6rem 0 3rem 0
             height: auto
+            width: 30em
+        @media only screen and (max-width: config.$small-xs)
+            width: auto
         img
             margin: 1em 0
             object-fit: scale-down
@@ -92,9 +103,9 @@ $middle-xs: 840px
                 margin: 0.5em 0 1.7em 0
                 font-size: 18px
                 font-weight: 600
-                color: #403b6aa9
+                color: #675fb6a9
             .description
-                color: #724e4e
+                color: #594c70
 
     .menu-profile
         padding: 2em 0
@@ -110,11 +121,14 @@ $middle-xs: 840px
             flex-flow: row wrap
             align-content: center
             justify-content: center
+            border-radius: 0.3em
+            margin: 0.2em
             &:hover
+                background-color: #6B77EA
                 p
-                    border-bottom: 2px solid #6B77EA
+                    color: #cdd0ed
 
-        @media only screen and (max-width: $middle-xs)
+        @media only screen and (max-width: config.$middle-xs)
             display: flex
             flex-direction: row
             justify-content: center
@@ -129,9 +143,10 @@ $middle-xs: 840px
                 block-size: fit-content
                 margin: 5em 0.5em 0 0.5em
                 padding: 0.5em
-                border-radius: 0.5em
+                border-radius: 0.3em
                 background-color: #ffffff8e
-                &:hover,&:focus
+                color: #6b588f
+                &:hover
                     background-color: #6B77EA
                     p
                         color: #cdd0ed
@@ -139,7 +154,7 @@ $middle-xs: 840px
     .category
         grid-column: 2/ span 2
         margin: 3rem 0 3rem 5vmax
-        @media only screen and (max-width: $middle-xs)
+        @media only screen and (max-width: config.$middle-xs)
             margin: 1rem 0 5rem 5vmin
 
 

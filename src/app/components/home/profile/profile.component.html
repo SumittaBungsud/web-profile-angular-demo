@@ -27,9 +27,9 @@
   </section>
   <section aria-details="menu profile">
     <ul class="menu-profile">
-      <li (click)="setCurrentTab('about')"><p>About me</p></li>
-      <li (click)="setCurrentTab('exp')"><p>Experiences</p></li>
-      <li (click)="setCurrentTab('skill')"><p>DevTools</p></li>
+      <li (click)="setCurrentTab('about')" title="about"><p>About me</p></li>
+      <li (click)="setCurrentTab('exp')" title="exp"><p>Experiences</p></li>
+      <li (click)="setCurrentTab('skill')" title="skill"><p>DevTools</p></li>
       <li><p>Courses</p></li>
       <li><p>Projects</p></li>
     </ul>
@@ -47,9 +47,9 @@
         talk!
       </p>
       <ul class="menu-profile">
-        <li (click)="setCurrentTab('about')"><p>About me</p></li>
-        <li (click)="setCurrentTab('exp')"><p>Experiences</p></li>
-        <li (click)="setCurrentTab('skill')"><p>DevTools</p></li>
+        <li (click)="setCurrentTab('about')" title="about"><p>About me</p></li>
+        <li (click)="setCurrentTab('exp')" title="exp"><p>Experiences</p></li>
+        <li (click)="setCurrentTab('skill')" title="skill"><p>DevTools</p></li>
         <li><p>Courses</p></li>
         <li><p>Projects</p></li>
       </ul>
@@ -57,12 +57,11 @@
   </section>
   }
   <section class="category">
-    @if (currentTab == 'about'){
-    <app-aboutme (currenttab)="setCurrentTab($event)"></app-aboutme>
-    }@else if (currentTab == 'exp'){
-    <app-exp></app-exp>
-    }@else if (currentTab == 'skill'){
-    <app-skill></app-skill>
-    }
+    <app-aboutme
+      (currenttab)="setCurrentTab($event)"
+      *ngIf="currentTab == 'about'"
+    ></app-aboutme>
+    <app-exp *ngIf="currentTab == 'exp'"></app-exp>
+    <app-skill *ngIf="currentTab == 'skill'"></app-skill>
   </section>
 </section>

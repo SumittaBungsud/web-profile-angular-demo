@@ -1,4 +1,29 @@
+$font-home: Arial, Helvetica, sans-serif
+$small: 645px
 
+#social-list
+  position: fixed
+  font-family: $font-home
+  background-color: #ffffff
+  top: 40vh
+  left: 1em
+  width: 3em
+  border-radius: 2em
+  box-shadow: 1px 1px 1px #696969
+  z-index: 1
 
+  @media only screen and (max-width: $small)
+    visibility: hidden
 
-// border: 2px solid black
+  .icon
+    display: flex
+    justify-content: center
+    padding: 0.3em
+    font-size: 1.7em
+    a
+      text-decoration: none
+      color: #5963bc
+      &:hover
+        color: #333c85
+
+//border: 2px solid black
