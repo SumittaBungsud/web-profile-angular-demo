@@ -1,4 +1,4 @@
-$font-fam: Arial, Helvetica, sans-serif
+@use "../../styleConfig/config"
 $font-color-1: #f6eef4
 $font-color-tag: #1a5a68
 $des-backgroud-lin: linear-gradient(0.35turn,#9ec0bc, #697b9b, #eabfe1)
@@ -7,15 +7,13 @@ $main-color-1: #9747FF
 $main-color-2:#6B77EA
 $main-color-3:#C79CFF
 $sub-color-1: #4e4e4e
-$middle: 1140px
-$small: 645px
 
 #project
     display: flex
     flex-direction: column
     height: 100%
     box-shadow: 0 -3px 10px #b5b5b5
-    font-family: $font-fam
+    font-family: config.$font-fam
     background-color: #f3ebde
 
     .project-component
@@ -38,7 +36,7 @@ $small: 645px
             .popbtn
                 width: 10em
 
-            @media only screen and (max-width: $small)
+            @media only screen and (max-width: config.$small)
                 font-size: 0.8em
 
         .project-item
@@ -89,10 +87,10 @@ $small: 645px
                                 color: #6e08b2
                     .proj-name
                         color: $main-color-2
-                        font-size: 2.3em
+                        font-size: 2.1em
                         font-weight: 700
                         margin: 0.5em 0
-                        @media only screen and (max-width: $middle)
+                        @media only screen and (max-width: config.$middle)
                                 font-size: 1.8em
                 .proj-des
                     display: flex
@@ -119,12 +117,12 @@ $small: 645px
                             color: $font-color-tag
                             border-radius: 0.25em
 
-    @media only screen and (max-width: $middle)
+    @media only screen and (max-width: config.$middle)
         .proj-img
             visibility: hidden
             width: 0
 
-    @media only screen and ( min-width: $middle)
+    @media only screen and ( min-width: config.$middle)
         .proj-des
             height: 25vmin
 

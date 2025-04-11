@@ -1,15 +1,13 @@
-$font-fam: Arial, Helvetica, sans-serif
+@use "../../../styleConfig/config"
 $main-color-1: #9747FF
 $main-color-3:#C79CFF
-$large: 1300px
-$small: 645px
 
 #skill
     padding: 6em 0 0 5vmin
     width: 55vmax
-    font-family: $font-fam
+    font-family: config.$font-fam
 
-    @media only screen and (max-width: $large)
+    @media only screen and (max-width: config.$large)
         padding: 0
         width: 80vw
 
@@ -42,7 +40,7 @@ $small: 645px
                 width: 2.5em
                 height: 2.5em
 
-                @media only screen and (max-width: $small)
+                @media only screen and (max-width: config.$small)
                     width: 1.8em
                     height: 1.8em
             img

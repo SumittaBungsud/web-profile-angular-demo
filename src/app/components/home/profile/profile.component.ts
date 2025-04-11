@@ -30,7 +30,7 @@ export class ProfileComponent {
   setCurrentTab(arrg: string) {
     const ref = document.querySelector('.menu-profile');
     if (ref) {
-      // Reset styles
+      // Reset tab styles
       let ref1 = ref.querySelector("li[title~='" + this.currentTab + "']");
       if (ref1) {
         ref1.setAttribute('style', this.menuStyle);

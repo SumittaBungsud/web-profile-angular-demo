@@ -1,32 +1,41 @@
-$font-fam: Arial, Helvetica, sans-serif
+@use "../../styleConfig/config"
 $main-color-1: #9747FF
 $main-color-2:#6B77EA
 $sub-color-1: #4e4e4e
-$small-xs: 645px
 
 #contact
     display: flex
     flex: row nowrap
     justify-content: center
-    font-family: $font-fam
-    background-color: #FFFDF6
+    font-family: config.$font-fam
+    object-fit: none
+    background: url(/image/bg-sunset.png) center
+    background-position: 0 -135px
+    color: #d1d8ff
+
+    @media only screen and (max-width: config.$large)
+        background-position: 45% 
+    @media only screen and (max-width: config.$small-xs)
+        background-position: 45% -100px
+
     .contact-component
         display: flex
         flex-direction: column
         align-items: center
+
         .text
             margin-top: 20vmin
             font-weight: 800
             font-size: 2.6em
-            color: $main-color-2
-            @media only screen and (max-width: $small-xs)
+            color: #bac1ff
+            @media only screen and (max-width: config.$small-xs)
                 font-size: 1.5em
         .popbtn
             margin-top: 15vmin 
-            margin-bottom: 40vmin 
+            margin-bottom: 45vmin 
             width: 10em
             font-size: 1.3em
-            @media only screen and (max-width: $small-xs)
+            @media only screen and (max-width: config.$small-xs)
                 font-size: 0.8em
         .credit
             display: flex

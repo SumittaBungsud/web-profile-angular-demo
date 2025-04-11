@@ -1,15 +1,14 @@
-$font-fam: Arial, Helvetica, sans-serif
+@use "../../../styleConfig/config"
 $main-color-1: #9747FF
 $main-color-3:#C79CFF
-$large: 1300px
-$middle-xs: 840px
+
 
 #experience
     padding: 6em 0 0 5vmin
     width: 50vw
-    font-family: $font-fam
+    font-family: config.$font-fam
 
-    @media only screen and (max-width: $large)
+    @media only screen and (max-width: config.$large)
         padding: 0
         width: 80vw
 
@@ -41,13 +40,13 @@ $middle-xs: 840px
                     background-color: #DDE3FF
                     box-shadow: 2px 2px 2px #9d9d9d
 
-        @media only screen and (max-width: $middle-xs)
+        @media only screen and (max-width: config.$middle-xs)
             flex-direction: column
             .cat-btn
                 margin-top: 2em
 
     .exp-details
-        @media only screen and (max-width: $large)
+        @media only screen and (max-width: config.$large)
             width: 80vw
 
         display: flex

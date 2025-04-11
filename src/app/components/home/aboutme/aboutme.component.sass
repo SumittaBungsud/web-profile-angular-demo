@@ -1,9 +1,7 @@
-$font-fam: Arial, Helvetica, sans-serif
+@use "../../../styleConfig/config"
 $main-color-1: #9747FF
 $main-color-3:#C79CFF
 $sub-color-1: #4e4e4e
-$large: 1300px
-$middle: 1140px
 
 #about
     .text-expand
@@ -18,17 +16,17 @@ $middle: 1140px
             background-color: #ffffff3f
             border: 1.5px solid #ffffff
             color: #8d8d8d
-        @media only screen and (max-width: $middle)
+        @media only screen and (max-width: config.$middle)
             visibility: visible
     .about-component
         position: relative
         padding: 6em 0 0 5vmin
         max-width: 42vw
-        font-family: $font-fam
+        font-family: config.$font-fam
 
-        @media only screen and (max-width: $large)
+        @media only screen and (max-width: config.$large)
             max-width: 80vw
-        @media only screen and (max-width: $middle)
+        @media only screen and (max-width: config.$middle)
             max-width: 80vw
             height: 20em
             overflow: hidden
