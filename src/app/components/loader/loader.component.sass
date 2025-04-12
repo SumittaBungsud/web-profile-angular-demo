@@ -18,6 +18,7 @@ $bd-color-1: linear-gradient(to right,#dfdfdf74,$sub-color-1, $main-color-2)
         width: 120px
         height: 120px
         align-content: center
+        animation: rotate 3s linear 
     text
         font-size: 1.5em
         font-weight: 600
@@ -30,6 +31,11 @@ $bd-color-1: linear-gradient(to right,#dfdfdf74,$sub-color-1, $main-color-2)
         border-radius: 50%
         animation: spin 4s linear
 
+    @keyframes rotate
+        0%
+            transform: rotate(0deg)
+        100%
+            transform: rotate(360deg)
     @keyframes spin
         from
             stroke-dashoffset: 500

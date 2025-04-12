@@ -1,10 +1,12 @@
 <section class="home-page">
-  <app-profile />
-  <app-project />
-  <app-contact />
+  <app-fade-box>
+    <app-profile />
+    <app-project />
+    <app-contact />
+  </app-fade-box>
 </section>
 
-<section id="social-list">
+<section id="social-nav">
   @for (item of socials; track item.id) {
   <div class="icon">
     <a [href]="item.link">
@@ -12,4 +14,13 @@
     </a>
   </div>
   }
+</section>
+
+<section #currentCom id="track-nav">
+  <ul>
+    <li *ngFor="let curr of homeSect">{{ curr.name }}</li>
+  </ul>
+  <button class="toTop" title="scroll to top">
+    <a href="#profile"><fa-icon [icon]="faArrowUp" /></a>
+  </button>
 </section>

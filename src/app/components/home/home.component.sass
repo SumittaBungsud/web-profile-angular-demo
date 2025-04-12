@@ -1,9 +1,8 @@
-$font-home: Arial, Helvetica, sans-serif
-$small: 645px
+@use "../../styleConfig/config"
 
-#social-list
+#social-nav
   position: fixed
-  font-family: $font-home
+  font-family: config.$font-fam
   background-color: #ffffff
   top: 40vh
   left: 1em
@@ -12,7 +11,7 @@ $small: 645px
   box-shadow: 1px 1px 1px #696969
   z-index: 1
 
-  @media only screen and (max-width: $small)
+  @media only screen and (max-width: config.$small)
     visibility: hidden
 
   .icon
@@ -25,5 +24,34 @@ $small: 645px
       color: #5963bc
       &:hover
         color: #333c85
+
+#track-nav
+  position: fixed
+  font-family: config.$font-fam
+  background-color: #ffffff
+  bottom: 10vh
+  right: 1em
+  z-index: 1
+
+  @media only screen and (max-width: config.$small)
+      visibility: hidden
+
+  .toTop
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 1.3em
+    width: 7vmin
+    height: 7vmin
+    border-radius: 10em
+    border: none
+    margin-top: 1.5em
+    padding: 1em
+    background: config.$main-color-1
+
+    a
+      text-decoration: none
+      color: #f0ebf9
+
 
 //border: 2px solid black
