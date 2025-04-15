@@ -1,4 +1,4 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutmeComponent } from '../aboutme/aboutme.component';
 import { ExperienceComponent } from '../experience/experience.component';
@@ -15,7 +15,7 @@ import { SkillComponent } from '../skill/skill.component';
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.sass',
 })
-export class ProfileComponent {
+export class ProfileComponent implements AfterViewInit {
   currentTab = 'about';
   win_middle_xs = window.innerWidth <= 840;
   menuStyle_active = `
@@ -26,6 +26,10 @@ export class ProfileComponent {
     color: none;
     background-color: none;
   `;
+
+  ngAfterViewInit() {
+    this.setCurrentTab('about');
+  }
 
   setCurrentTab(arrg: string) {
     const ref = document.querySelector('.menu-profile');

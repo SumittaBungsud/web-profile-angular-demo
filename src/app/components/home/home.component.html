@@ -1,9 +1,7 @@
 <section class="home-page">
-  <app-fade-box>
-    <app-profile />
-    <app-project />
-    <app-contact />
-  </app-fade-box>
+  <app-profile #profileBox />
+  <app-project #projectBox />
+  <app-contact #contactBox />
 </section>
 
 <section id="social-nav">
@@ -16,11 +14,26 @@
   }
 </section>
 
-<section #currentCom id="track-nav">
+<section id="track-nav">
   <ul>
-    <li *ngFor="let curr of homeSect">{{ curr.name }}</li>
+    <li data-type="Profile-tracking">
+      <p *ngIf="currentBox == 'Profile'">Profile</p>
+      <div #profileTrack class="track-dot" title="Profile"></div>
+    </li>
+    <li data-type="Project-tracking">
+      <p *ngIf="currentBox == 'Project'">Project</p>
+      <div #projectTrack class="track-dot" title="Project"></div>
+    </li>
+    <li data-type="Contact-tracking">
+      <p *ngIf="currentBox == 'Contact'">Contact</p>
+      <div #contactTrack class="track-dot" title="Contact"></div>
+    </li>
   </ul>
-  <button class="toTop" title="scroll to top">
-    <a href="#profile"><fa-icon [icon]="faArrowUp" /></a>
-  </button>
+  <a
+    *ngIf="currentBox == 'Contact'"
+    href="#profile"
+    class="toTop"
+    title="scroll to top"
+    ><fa-icon [icon]="faArrowUp"
+  /></a>
 </section>

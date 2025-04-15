@@ -12,7 +12,7 @@ export class FadeBoxComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        console.log(entry);
+        // console.log(entry);
         if (entry.isIntersecting) {
           this.boxRef.nativeElement.classList.add('visible');
           observer.unobserve(this.boxRef.nativeElement); // stop repeating

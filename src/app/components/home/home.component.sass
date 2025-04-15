@@ -27,31 +27,55 @@
 
 #track-nav
   position: fixed
+  display: flex
+  flex-direction: column
+  align-items: center
   font-family: config.$font-fam
-  background-color: #ffffff
+  background-color: #ffffff00
   bottom: 10vh
   right: 1em
   z-index: 1
 
   @media only screen and (max-width: config.$small)
-      visibility: hidden
+    visibility: hidden
 
+  li
+    position: relative
+    display: flex
+    flex-direction: row
+    p
+      position: absolute
+      right: 2em
+      top: 1em
+      font-weight: 600
+      color: #6200e2
+      padding: 0 0.7em
+      text-shadow: 0 0 4px #ffffff
+      // border-bottom: 1.5px solid #535353
+  .track-dot
+    width: 1.2em
+    height: 1.2em
+    border-radius: 1em
+    background: #39157b
+    margin: 1em 0
+    transition: all 0.8s ease
+    &.expand
+      height: 4em
+      background: linear-gradient(180deg, config.$sub-color-2, config.$sub-color-1)
   .toTop
     display: flex
     justify-content: center
     align-items: center
     font-size: 1.3em
-    width: 7vmin
-    height: 7vmin
+    width: 1.2em
+    height: 1.2em
     border-radius: 10em
     border: none
     margin-top: 1.5em
-    padding: 1em
+    padding: 0.8em
     background: config.$main-color-1
-
-    a
-      text-decoration: none
-      color: #f0ebf9
+    text-decoration: none
+    color: #f0ebf9
 
 
 //border: 2px solid black
