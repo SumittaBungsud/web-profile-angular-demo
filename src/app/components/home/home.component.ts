@@ -53,7 +53,7 @@ export class HomeComponent implements AfterViewInit {
         await entries.forEach(async (entry) => {
           if (entry.isIntersecting) {
             await this.removeCurrentStyle();
-            console.log(observer, entry.intersectionRatio);
+            // console.log(observer, entry.intersectionRatio);
             if (entry.target.localName.includes('profile')) {
               this.profTrack.nativeElement.classList.add('expand');
               this.currentBox = 'Profile';

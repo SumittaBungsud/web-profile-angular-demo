@@ -4,7 +4,10 @@ $sub-color-1: #dfdfdf
 $hl-theme1: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3)
 $bd-color-1: linear-gradient(to right,#dfdfdf74,$sub-color-1, $main-color-2)
 
-#details
+#loader.hidden
+    visibility: hidden
+
+#loader
     position: fixed
     display: flex
     align-items: center
@@ -14,6 +17,7 @@ $bd-color-1: linear-gradient(to right,#dfdfdf74,$sub-color-1, $main-color-2)
     font-family: config.$font-fam
     background: #291657
     z-index: 100
+    
     svg
         position: absolute
         width: 120px

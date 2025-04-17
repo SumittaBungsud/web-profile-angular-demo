@@ -23,9 +23,12 @@
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
     "@fortawesome/free-regular-svg-icons": "^6.7.1",
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@reduxjs/angular-redux": "^2.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "zone.js": "~0.15.0",
+    "@reduxjs/toolkit": "^2.2.7",
+    "redux": "^5.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.1.7",
