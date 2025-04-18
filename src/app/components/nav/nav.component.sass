@@ -8,6 +8,13 @@
   font-family: config.$font-fam
   z-index: 20
 
+button.nav-menu
+  background: none
+  border: none
+  font-size: 1.7em
+  padding: 0 1em
+  color: config.$main-color-2
+
 .nav-home
   display: flex
   justify-content: center
@@ -19,6 +26,10 @@
   flex: 8
   padding: 0.3em 3em
 
+  @media screen and ( max-width: config.$middle-xs )
+    padding: 0.3em 1.5em
+    margin: auto 0.5em
+
 .nav-home-sec2
   display: grid
   margin-right: 5em
@@ -26,10 +37,20 @@
   grid-template-columns: auto auto auto
   justify-items: center
 
+  @media screen and ( max-width: config.$middle-xs )
+    position: absolute
+    display: flex
+    flex-direction: column
+    background: #ffffff
+    border-radius: 0.3em
+    margin: 4.5em 0.5em 0 0
+    padding: 0 0.5em
+    grid-gap: 0
+    right: 0
+
   a
     padding: 1.2em 0
     color: #424242ad
-
     &:hover
       color: #424242
 
@@ -44,5 +65,8 @@
 
     &:hover
       background-color: #91a1ffd0
+
+.nav-home-sec2.hidden
+  visibility: hidden
 
 //border: 2px solid black
