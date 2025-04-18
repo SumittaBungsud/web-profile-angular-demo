@@ -14,8 +14,21 @@ $sub-color-1: #4e4e4e
     height: 100%
     box-shadow: 0 -3px 10px #b5b5b5
     font-family: config.$font-fam
-    background-color: #f3ebde
+    animation: bgShift 12s ease-in-out infinite
+    background: linear-gradient(20deg,#74a7eeee 5%,#c5b1df 15%,#efb7b2d6 25%, #f3ebdea1 35%, #ffffff00),linear-gradient(170deg,#74a7eed6 10%,#c5b1dfd6 25%,#efb7b2d6 35%, #f3ebdea1 45%, #ffffff00),linear-gradient(290deg,#74a7eed6 10%,#c5b1dfd6 25%,#efb7b2d6 35%, #f3ebdea1 45%, #ffffff00)
+    background-size: 400% 400%
 
+    @keyframes bgShift
+        0%
+            background-position: 0% 80%
+        25%
+            background-position: 0% 10%
+        50%
+            background-position: 70% 30%
+        75%
+            background-position: 100% 0%
+        100%
+            background-position: 0% 80%
     .project-component
         margin: 5vw 10vw
         .subject

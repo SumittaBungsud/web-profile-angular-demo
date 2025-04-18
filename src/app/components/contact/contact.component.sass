@@ -22,7 +22,13 @@ $sub-color-1: #4e4e4e
         display: flex
         flex-direction: column
         align-items: center
+        padding: 0 20em
+        border-radius: 50%
+        backdrop-filter: blur(3px)
 
+        @media only screen and (max-width: config.$large)
+            padding: 0
+            backdrop-filter: none
         .text
             margin-top: 20vmin
             font-weight: 800

@@ -37,14 +37,15 @@
             margin-bottom: 0.75em
             font-weight: 600
             color: config.$sub-color-1
-        .description
-            font-size: 16px
-            margin: 0.25em 1.5em
-
-        ul
-            list-style: '▹' outside
-            li
+        ul.des-list
+            list-style: none
+            li.description
+                font-size: 16px
+                margin: 0.25em 0
                 padding: 0.2em
+                &::before
+                    font-weight: 800
+                    content: '▹ '
 
     .edu-item
         @extend %exp-layout
