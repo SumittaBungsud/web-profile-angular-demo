@@ -13,10 +13,10 @@
 <section id="profile" (window:resize)="onResize()">
   @if (win_middle_xs){
   <section class="profile-info">
-    <img src="image/cactus.png" />
+    <img src="image/profile-pic.png" />
     <article>
       <p class="name">Sumitta Bungsud</p>
-      <p class="position">Full Stack Engineer</p>
+      <p class="position">Software Engineer</p>
       <p class="description">
         I'm a software engineer at SS&C Technologies. I built this web to
         present as the profile and portfolio about my learning experiences. Hope
@@ -30,13 +30,12 @@
       <li (click)="setCurrentTab('about')" title="about"><p>About me</p></li>
       <li (click)="setCurrentTab('exp')" title="exp"><p>Experiences</p></li>
       <li (click)="setCurrentTab('skill')" title="skill"><p>DevTools</p></li>
-      <li><p>Courses</p></li>
-      <li><p>Projects</p></li>
+      <!-- <li><p>Courses</p></li> -->
     </ul>
   </section>
   }@else{
   <section class="profile-info">
-    <img src="image/cactus.png" />
+    <img src="image/profile-pic.png" />
     <article>
       <p class="name">Sumitta Bungsud</p>
       <p class="position">Software Engineer</p>
@@ -50,8 +49,7 @@
         <li (click)="setCurrentTab('about')" title="about"><p>About me</p></li>
         <li (click)="setCurrentTab('exp')" title="exp"><p>Experiences</p></li>
         <li (click)="setCurrentTab('skill')" title="skill"><p>DevTools</p></li>
-        <li><p>Courses</p></li>
-        <li><p>Projects</p></li>
+        <!-- <li><p>Courses</p></li> -->
       </ul>
     </article>
   </section>

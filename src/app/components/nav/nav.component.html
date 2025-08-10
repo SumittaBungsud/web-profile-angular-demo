@@ -11,24 +11,24 @@
       </a>
     </div>
     @if(win_middle_xs){
-    <button
-      class="nav-menu"
-      (focusin)="isExpand = true"
-      (focusout)="isExpand = false"
-    >
-      <fa-icon [icon]="faEllipsisV"></fa-icon>
+    <button class="nav-menu" (click)="isExpand = !isExpand">
+      @if(isExpand){
+      <fa-icon [icon]="faXmark" />
+      }@else{
+      <fa-icon [icon]="faEllipsisV" />
+      }
     </button>
-    <div class="nav-home-sec2" title="options" [class.hidden]="!isExpand">
-      <a class="button" href="#project">Projects</a>
-      <a class="button" href="#contact">Contact</a>
+    <div class="nav-home-sec2" [class.hidden]="!isExpand">
+      <a class="button" href="#project" title="Projects">Projects</a>
+      <a class="button" href="#contact" title="Contact">Contact</a>
       <button>
         <a href="source/SUMITTA BUNGSUD-CV-Software-Engineer.pdf">Resume</a>
       </button>
     </div>
     }@else{
-    <div class="nav-home-sec2" title="options">
-      <a class="button" href="#project">Projects</a>
-      <a class="button" href="#contact">Contact</a>
+    <div class="nav-home-sec2">
+      <a class="button" href="#project" title="Projects">Projects</a>
+      <a class="button" href="#contact" title="Contact">Contact</a>
       <button>
         <a href="source/SUMITTA BUNGSUD-CV-Software-Engineer.pdf">Resume</a>
       </button>
