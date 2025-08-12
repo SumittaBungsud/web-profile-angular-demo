@@ -8,15 +8,24 @@ $sub-color-1: #4e4e4e
     flex: row nowrap
     justify-content: center
     font-family: config.$font-fam
+    background-image: url('/image/bg-sunset.png')
+    background-position: 5px
     object-fit: none
-    background: url(/image/bg-sunset.png) center
-    background-position: 0 -135px
     color: #d1d8ff
 
     @media only screen and (max-width: config.$large)
         background-position: 45% 
     @media only screen and (max-width: config.$small-xs)
         background-position: 45% -100px
+
+    // img
+    //     position: absolute
+    //     transform: scale(1.2,1.2)
+    //     right: -50px
+    //     object-fit: cover
+    //     width: 100vw
+    //     height: 100vh
+    //     z-index: -1
 
     .contact-component
         display: flex
@@ -49,5 +58,8 @@ $sub-color-1: #4e4e4e
             align-items: center
             p
                 margin-bottom: 1.5em
+            
+            @media only screen and (max-width: config.$small-xs)
+                font-size: 0.8em
 
 //border: 2px solid black
