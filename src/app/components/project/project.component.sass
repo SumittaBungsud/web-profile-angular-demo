@@ -31,6 +31,10 @@ $sub-color-1: #4e4e4e
             background-position: 0% 80%
     .project-component
         margin: 5vw 10vw
+
+        @media only screen and (max-width: config.$small)
+            margin: 7vw 5vw
+
         .subject
             font-size: 2em
             font-weight: 700
@@ -40,6 +44,10 @@ $sub-color-1: #4e4e4e
             border-image: $hl-theme1 1 round
             padding-left: 0.6em
             margin: 5vw 0
+
+            @media only screen and (max-width: config.$small)
+                margin: 10vw 0
+                font-size: 1.6em
 
         .view-more
             display: flex
@@ -61,6 +69,10 @@ $sub-color-1: #4e4e4e
             background-color: #ffffff66
             box-shadow: 0 0 8px #dbb5b55b
             border-radius: 1em
+
+            @media only screen and (max-width: config.$small)
+                padding: 0.6em
+
             .proj-img
                 display: flex
                 align-content: center
@@ -68,6 +80,10 @@ $sub-color-1: #4e4e4e
                 border-radius: 1em
                 &:hover
                     background-image: linear-gradient(to bottom,#5605c171, #bb82ea71, #f5a5e371)
+
+                @media only screen and (max-width: config.$small)
+                    margin: 0
+
             img
                 border-radius: 1em
                 align-self: center
@@ -98,13 +114,21 @@ $sub-color-1: #4e4e4e
                             align-content: center
                             &:hover
                                 color: #6e08b2
+
+                        @media only screen and (max-width: config.$small)
+                            font-size: 20px
+                            padding-right: 0.5em
+
                     .proj-name
                         color: $main-color-2
                         font-size: 2.1em
                         font-weight: 700
                         margin: 0.5em 0
+
                         @media only screen and (max-width: config.$middle)
-                                font-size: 1.8em
+                            font-size: 1.8em
+                        @media only screen and (max-width: config.$small)
+                            font-size: 24px
                 .proj-des
                     display: flex
                     flex-direction: column

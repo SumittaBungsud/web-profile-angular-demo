@@ -11,6 +11,8 @@ $main-color-3:#C79CFF
     @media only screen and (max-width: config.$large)
         padding: 0
         width: 80vw
+    @media only screen and (max-width: config.$middle)
+        width: 90vw
 
     .subject
         font-size: 2em
@@ -20,6 +22,9 @@ $main-color-3:#C79CFF
         border-left: 5px solid 
         border-image: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3) 1 round
         padding-left: 0.6em
+
+        @media only screen and (max-width: config.$small)
+            font-size: 1.6em
 
     .header
         display: flex
@@ -48,6 +53,8 @@ $main-color-3:#C79CFF
     .exp-details
         @media only screen and (max-width: config.$large)
             width: 80vw
+        @media only screen and (max-width: config.$small)
+            width: 90vw
 
         display: flex
         flex-direction: column

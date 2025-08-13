@@ -7,11 +7,11 @@ $sub-color-1: #4e4e4e
     .text-expand
         visibility: hidden
         margin: 2em 0
-        padding: 0.3em
-        font-size: 1.1em
+        padding: 0.5em
+        font-size: 1em
         background: none
         border: 1.5px solid #5b5b5b
-        border-radius: 0.5em
+        border-radius: 1.2em
         &:hover
             background-color: #ffffff3f
             border: 1.5px solid #ffffff
@@ -27,7 +27,7 @@ $sub-color-1: #4e4e4e
         @media only screen and (max-width: config.$large)
             max-width: 80vw
         @media only screen and (max-width: config.$middle)
-            max-width: 80vw
+            max-width: 90vw
             height: 20em
             overflow: hidden
             padding: 0
@@ -41,6 +41,9 @@ $sub-color-1: #4e4e4e
             border-image: linear-gradient(to bottom,#5705c1, #bb82ea, #f5a5e3) 1 round
             padding-left: 0.6em
             margin-bottom: 0.75em
+
+            @media only screen and (max-width: config.$small)
+                font-size: 1.6em
         p
             font-size: 1.1em
         > div
