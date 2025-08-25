@@ -5,6 +5,15 @@
       <a href="mailto: sumitta.hct@gmail.com">
         <app-popbtn class="popbtn" txt="Say Hello" backgnd="#ffffff"
       /></a>
+      <section class="social-nav">
+        @for (item of socials; track item.id) {
+        <div class="icon">
+          <a [href]="item.link">
+            <fa-icon [icon]="item.icon" />
+          </a>
+        </div>
+        }
+      </section>
       <div class="credit">
         <p>Designed & Built by © Sumitta Bungsud 2025</p>
         <!-- <p>Visitor 99999</p> -->
