@@ -17,7 +17,6 @@ export class NavComponent {
   faXmark = faXmark;
   isExpand = false;
   scrollHeight = 0;
-  isScrollDown = false;
 
   onResize() {
     this.win_middle_xs = window.innerWidth <= 840;
@@ -25,9 +24,9 @@ export class NavComponent {
 
   onScrollDown() {
     if (this.scrollHeight > window.scrollY) {
-      this.isScrollDown = false;
+      this.navRef.nativeElement.style.height = '70px';
     } else {
-      this.isScrollDown = true;
+      this.navRef.nativeElement.style.height = '0';
     }
     this.scrollHeight = window.scrollY;
   }
