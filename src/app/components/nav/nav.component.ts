@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -11,12 +11,28 @@ import { faEllipsisV, faXmark } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './nav.component.sass',
 })
 export class NavComponent {
+  @ViewChild('navbar') navRef!: ElementRef;
   win_middle_xs = window.innerWidth <= 840;
   faEllipsisV = faEllipsisV;
   faXmark = faXmark;
   isExpand = false;
+  scrollHeight = 0;
+  isScrollDown = false;
 
   onResize() {
     this.win_middle_xs = window.innerWidth <= 840;
+  }
+
+  onScrollDown() {
+    if (this.scrollHeight > window.scrollY) {
+      this.isScrollDown = false;
+    } else {
+      this.isScrollDown = true;
+    }
+    this.scrollHeight = window.scrollY;
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
